@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi siamo - Suvasca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('ristorante.jpg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a,
+    .personal-area {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover,
+    .personal-area:hover {
+      background-color: #d35400;
+    }
+
+    .info-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 15px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="top-bar">
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="mappa.html">📍 Dove siamo</a>
+      <a href="chi-siamo.html">👥 Chi siamo</a>
+      <a href="cucina.html">🍽️ Cucina</a>
+    </div>
+    <a href="utente.html" class="personal-area">👤 Area Personale</a>
+  </header>
+
+  <div class="info-container">
+    <h2>Chi siamo</h2>
+    <p><strong>Suvo</strong> – Chef e fondatore di origini bengalesi, maestro dei sapori intensi del Bangladesh. Coordina la cucina e crea piatti che raccontano la sua terra.</p>
+    <p><strong>Abla</strong> – Co-fondatrice egiziana, specializzata in piatti mediorientali. I suoi dolci e piatti tradizionali evocano la cucina casalinga del Cairo.</p>
+    <p><strong>Michael</strong> – Italiano, responsabile dell'accoglienza e dei piatti italiani. Cura l’ambiente familiare e la qualità dell’esperienza dei clienti.</p>
+    <p>Insieme, portano a Bergamo un ristorante dove si fondono tradizione, amore per la cucina e multiculturalità.</p>
+  </div>
+
+</body>
+</html>

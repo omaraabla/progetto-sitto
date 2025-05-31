@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prenotazione Tavolo - SUVASCA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="top-left">
+  <a href="index.html" class="btn">Torna alla Home</a>
+</div>
+  <div class="container">
+    <h1 class="menu-container section-overlay">Prenota un Tavolo</h1>
+    <form id="formPrenotazione">
+      <label>Nome: <input type="text" id="nome" required /></label><br />
+<label>Numero di persone: <input type="number" id="persone" min="1" required /></label><br />
+<label>Data: <input type="date" id="data" required /></label><br />
+<label>Ora: <input type="time" id="ora" required /></label><br />
+
+      <button type="submit" class="btn">Prenota</button>
+    </form>
+
+    <div id="confermaPrenotazione" class="conferma"></div>
+	
+  </div>
+   <div class="info-section"  >
+      <h2>Informazioni Ristorante</h2>
+      <ul>
+        <li><strong>Orario di apertura:</strong> 12:00-15.00 19-23:00</li>
+        <li><strong>Posti disponibili:</strong> 50</li>
+        <li><strong>Telefono:</strong> +39 3518802584</li>
+      </ul>
+    </div>
+
+
+  <script src="prenotazione.js"></script>
+  
+</body>
+</html>

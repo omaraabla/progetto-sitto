@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Area Personale - Suvasca</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="prenotazione.html">📅 Prenota</a>
+    </div>
+  </header>
+
+  <main class="area-personale">
+    <h1>Area Personale</h1>
+
+    <form id="loginForm">
+      <label for="username">Nome utente:</label>
+      <input type="text" id="username" placeholder="Inserisci il tuo nome" required />
+      <button type="submit">Accedi</button>
+    </form>
+
+    <section id="prenotazioni" style="display: none;">
+      <div id="areaBenvenuto" style="margin-top: 1em;"></div>
+      <h2>Le tue prenotazioni</h2>
+      <ul id="listaPrenotazioni"></ul>
+      <a href="index.html" class="btn" style="margin-top: 1em; display: inline-block;">⬅️ Torna alla Home</a>
+    </section>
+  </main>
+
+  <script>
+  document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value.toLowerCase().trim();
+  const lista = document.getElementById("listaPrenotazioni");
+  lista.innerHTML = "";
+
+  // Recupera le prenotazioni dal localStorage
+  const archivio = JSON.parse(localStorage.getItem("prenotazioni")) || {};
+  const prenotazioniUtente = archivio[username];
+
+  const areaBenvenuto = document.getElementById("areaBenvenuto");
+  areaBenvenuto.innerHTML = `👋 Benvenuto, <strong>${username}</strong>!`;
+
+  if (prenotazioniUtente && prenotazioniUtente.length > 0) {
+    prenotazioniUtente.forEach(p => {
+      const li = document.createElement("li");
+      li.textContent = p;
+      lista.appendChild(li);
+    });
+  } else {
+    const li = document.createElement("li");
+    li.textContent = "Non hai ancora effettuato prenotazioni.";
+    lista.appendChild(li);
+  }
+
+  document.getElementById("prenotazioni").style.display = "block";
+});
+
+  </script>
+</body>
+</html>

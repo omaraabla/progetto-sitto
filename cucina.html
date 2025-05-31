@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cucina - Suvasca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('ristorante.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a,
+    .personal-area {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover,
+    .personal-area:hover {
+      background-color: #d35400;
+    }
+
+    .info-section {
+      max-width: 900px;
+      margin: 4rem auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .info-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-section h3 {
+      font-size: 1.5rem;
+      color: #ffcc70;
+      margin-top: 2rem;
+    }
+
+    .info-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0.5rem 0 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="top-bar">
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="mappa.html">📍 Dove siamo</a>
+      <a href="chi-siamo.html">👨‍🍳 Chi siamo</a>
+    </div>
+    <a href="utente.html" class="personal-area">👤 Area Personale</a>
+  </header>
+
+  <section class="info-section">
+    <h2>🍽️ La nostra cucina</h2>
+
+    <h3>🇮🇹 Cucina Italiana</h3>
+    <p>Pizze cotte a legna, pasta fatta in casa, ingredienti freschi della tradizione mediterranea.</p>
+
+    <h3>🇪🇬 Cucina Egiziana</h3>
+    <p>Koshari, falafel, ful medames, con spezie autentiche e ricette tramandate.</p>
+
+    <h3>🇧🇩 Cucina Bengalese</h3>
+    <p>Biryani, curry di pesce, piatti ricchi di aromi e intensità, preparati con amore e maestria.</p>
+  </section>
+</body>
+</html>
